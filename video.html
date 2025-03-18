@@ -1,0 +1,63 @@
+Try AI directly in your favorite apps … Use Gemini to generate drafts and refine content, plus get Gemini Advanced with access to Google’s next-gen AI for ₱1,100.00 ₱0 for 1 month
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="./css/video.css">
+  <title>Mathew Videos</title>
+</head>
+<body>
+  <header>
+        <div class="header-left">
+            <h1>Go Site</h1>
+        </div>
+        <div class="header-right">
+            <a href="login.html" class="login-button">Login</a>
+        </div>
+    </header>
+  
+  <nav class="nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="video.html">Videos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="about.html">About Me</a></li>
+    </ul>
+  </nav>
+
+  <main class="videos">
+    <h1>My Videos</h1>
+    <div class="video-grid">
+      <div class="video-thumbnail">
+        <video id="videoPlayer" controls autoplay></video>
+      <div class="video-name">MY RANDOM Videos</div>
+      </div>
+    </div>
+  </main>
+  
+  <footer class="footer">&copy; 2024 Johnree Mathew A. Go</footer>
+</body>
+<script>
+  let videos = [
+      './css/1.mp4', 
+      './css/2.mp4',
+      './css/3.mp4', 
+      './css/4.mp4', 
+      './css/5.mp4', 
+      './css/hehe.mp4'
+  ];
+
+  let currentVideoIndex = 0;
+  let videoPlayer = document.getElementById("videoPlayer");
+
+  function playNextVideo() {
+      videoPlayer.src = videos[currentVideoIndex];
+      videoPlayer.play();
+      currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+  }
+
+  videoPlayer.addEventListener('ended', playNextVideo);
+  playNextVideo(); 
+</script>
+</html>
